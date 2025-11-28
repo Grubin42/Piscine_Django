@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Contact Form</title>
+  </head>
+  <body>
+    <h1>Formulaire de Contact</h1>
+    
+    <form>
+      <input type="text" name="firstname" placeholder="Firstname" />
+      <input type="text" name="name" placeholder="Name" />
+      <input type="number" name="age" placeholder="Age" />
+      <input type="tel" name="phone" placeholder="Phone" />
+      <input type="email" name="email" placeholder="Email" />
+      
+      <input type="checkbox" name="student" /> Student at 42?
+      
+      <label>Gender:</label>
+      <input type="radio" name="gender" value="Male" /> Male
+      <input type="radio" name="gender" value="Female" /> Female
+      <input type="radio" name="gender" value="Other" /> Other
+      
+      <button type="button" onclick="displayFormContents();">Submit</button>
+    </form>
+
+    <!-- Importer le JavaScript fourni -->
+    <script src="popup.js"></script>
+  </body>
+</html>

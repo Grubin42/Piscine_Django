@@ -1,0 +1,9 @@
+
+services:
+  app:
+    build: .
+    volumes:
+      - .:/app
+    ports:
+      - "10003:8000"
+    working_dir: /app

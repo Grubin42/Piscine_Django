@@ -1,0 +1,10 @@
+
+services:
+  app:
+    build: .
+    volumes:
+      - .:/app
+    ports:
+      - "9002:8000"
+    working_dir: /app
+
