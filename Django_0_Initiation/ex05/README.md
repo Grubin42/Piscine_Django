@@ -100,6 +100,34 @@ Corriger le fichier `index.html` pour passer la validation W3C (aucune erreur, a
 
 ---
 
+## 🚀 Commandes Docker
+
+```bash
+# 1. Lancer ex05
+cd Django_0_Initiation
+make ex05
+
+# 2. Ouvrir navigateur
+# http://localhost:8005/index.html
+
+# 3. Vérifier la validation W3C
+# Utilisez https://validator.w3.org/
+# Uploadez index.html
+# Vérifiez: 0 erreur, 0 warning
+
+# 4. Arrêter
+make clean
+```
+
+## 💻 Commandes rapides
+```bash
+make up      # Lancer le conteneur
+make down    # Arrêter
+make logs    # Voir les logs
+```
+
+---
+
 ## 🔗 Tester
 
 1. Ouvrez [W3C Validator](https://validator.w3.org/)
