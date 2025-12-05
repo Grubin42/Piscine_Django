@@ -7,4 +7,4 @@ services:
     ports:
       - "10007:8000"
     working_dir: /app
-    entrypoint: /bin/bash -c "python3 /app/periodic_table.py && python3 -m http.server 8000 --bind 0.0.0.0"
+    entrypoint: /bin/bash -c "python3 periodic_table.py && python3 -m http.server 8000 --bind 0.0.0.0"

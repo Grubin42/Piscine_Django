@@ -1,49 +1,50 @@
-# Exercise 07 - Tableau Périodique Interactif
+# Exercise 07 - Tableau Périodique des Éléments
 
 ## 🎯 Objectif
-Créer un script Python qui parse le fichier `periodic_table.txt` et génère une page HTML interactive affichant le tableau périodique avec design moderne et fonctionnalités interactives.
+Créer un script Python qui parse le fichier `periodic_table.txt` et génère une page HTML affichant le tableau périodique des éléments avec le layout correct de Mendeleïev.
 
 ## 📋 Fichiers
 - `periodic_table.py` - Script Python qui génère l'HTML
 - `periodic_table.txt` - Données des 118 éléments (fourni)
-- `index.html` - Généré automatiquement par le script
+- `periodic_table.html` - Généré automatiquement par le script
 
-## 🎨 Fonctionnalités
+## ✅ Conformité aux consignes
+✅ Seul `import sys` autorisé
 ✅ Parse le fichier `periodic_table.txt`
 ✅ Génère l'HTML dynamiquement en Python
-✅ Tableau périodique complet (118 éléments)
-✅ Couleurs par catégorie (métaux, non-métaux, gaz nobles, etc.)
-✅ Légende interactive
-✅ Infos détaillées au clic (numéro atomique, masse molaire, configuration électronique)
-✅ Design moderne avec gradient et animations
-✅ Responsive (adapté aux mobiles)
+✅ Chaque élément dans une case (div avec grid)
+✅ Nom en balise `<h4>`
+✅ Attributs en liste `<ul><li>` (numéro atomique, symbole, masse molaire)
+✅ Layout de Mendeleïev respecté (positions et retours à la ligne)
+✅ CSS inline pour le style
+✅ HTML valide W3C
+✅ Aucun code dans le scope global
+✅ Fonction appelée dans `if __name__ == '__main__':`
 
-## 🚀 Commandes Docker
+## 🚀 Commandes
 
-### Lancer l'exercice
+### Avec Docker
 ```bash
 cd Django_0_Starting
 make ex07
+# Ouvrir http://localhost:10007
 ```
 
-Le script Python va:
-1. Parser `periodic_table.txt`
-2. Générer `index.html` avec tous les éléments
-3. Lancer un serveur HTTP
-
-### Accéder à la page
-```
-http://localhost:10007
-```
-
-### Tester en local
+### En local
 ```bash
 cd Django_0_Starting/ex07
-python3 periodic_table.py  # Génère index.html
-# Ouvrir index.html dans le navigateur
+
+# 1. Générer periodic_table.html
+python3 periodic_table.py
+
+# 2. Lancer le serveur
+python3 -m http.server 8000
+
+# 3. Ouvrir dans le navigateur
+# http://localhost:8000/periodic_table.html
 ```
 
-### Arrêter
+### Arrêter (Docker)
 ```bash
 cd Django_0_Starting
 make clean
@@ -56,18 +57,11 @@ make clean
 - 🟡 **Halogènes** - Réactifs (jaune)
 - 🟠 **Métaux de transition** - Métaux complexes (vert menthe)
 
-## 💡 Utilisation
-1. Lancez `make ex07`
-2. Ouvrez `http://localhost:10007`
-3. Cliquez sur un élément pour voir ses détails
-4. Fermez la popup en cliquant le X ou ailleurs
-
 ## 🎓 Concepts
 - **Parsing de fichiers** - Lire et analyser `periodic_table.txt`
-- **String manipulation** - Extraire les données
-- **Génération HTML** - Créer du HTML en Python
-- **CSS en Python** - Intégrer le style dans l'HTML
-- **JavaScript inline** - Injecter le JavaScript dans le HTML généré
-- **Grille CSS** - Layout du tableau
-- **Responsive design** - Adaptation mobile/desktop
+- **String manipulation** - Extraire les données sans regex
+- **Génération HTML** - Créer du HTML valide en Python
+- **CSS inline** - Intégrer le style directement
+- **Grid CSS** - Layout du tableau périodique
+- **Minimal imports** - Utiliser SEULEMENT `sys`
 

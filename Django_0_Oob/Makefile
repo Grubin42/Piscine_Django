@@ -2,22 +2,19 @@
 
 help:
 	@echo "=========================================="
-	@echo "Exercices Django_0_Oob"
+	@echo "Exercices Django_0_Oob (POO)"
 	@echo "=========================================="
 	@echo ""
 	@echo "Usage: make ex00, make ex01, etc"
 	@echo ""
-	@echo "Ports d'accès:"
-	@echo "  ex00: http://localhost:9000"
-	@echo "  ex01: http://localhost:9001"
-	@echo "  ex02: http://localhost:9002"
-	@echo "  ex03: http://localhost:9003"
-	@echo "  ex04: http://localhost:9004"
-	@echo "  ex05: http://localhost:9005"
-	@echo "  ex06: http://localhost:9006"
-	@echo ""
 	@echo "Commandes:"
-	@echo "  make ex00-06     - Lance exercice XX"
+	@echo "  make ex00        - Générateur de CV (Template)"
+	@echo "  make ex01        - Classes Intern et Coffee"
+	@echo "  make ex02        - Hiérarchie de boissons"
+	@echo "  make ex03        - 6 classes (POO avancée)"
+	@echo "  make ex04        - Classe Elem (HTML)"
+	@echo "  make ex05        - Classes HTML dérivées"
+	@echo "  make ex06        - Validation de pages HTML"
 	@echo "  make clean       - Arrête tous les conteneurs"
 	@echo "  make clean-all   - Arrête et nettoie les images"
 
@@ -55,4 +52,3 @@ clean-all: clean
 	docker system prune -f
 
 .DEFAULT_GOAL := help
-
